@@ -1,0 +1,123 @@
+/*Адаптивна сітка*/
+.container {
+	width: 100%; 
+	max-width: 960px; 
+	margin: 0 auto; 
+}
+.photo {
+	float: left; 
+	width: 25%;
+	padding: 10px; 
+	box-sizing: border-box; 
+}
+.photo img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border: 10px solid #B0C4DE; 
+	box-sizing: border-box; 
+} 
+/*Стиль при наведені*/
+.photo a:hover {
+	opacity: 0.5;
+}
+.photo a {
+	display: block;
+	position: relative;
+}
+.photo a:hover::after {
+	content: '';
+	background: transparent url(../img/icons/eye-icon.png) no-repeat center;
+	width: 52px;
+	height: 35px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+/*Підключення гугл шрифтів та встановлення фонового зображення*/
+body {
+	font-family: 'Yeseva One', cursive;
+	background-image: url(../img/background/1.jpg);
+}
+/*Підписи до картинок*/
+.photo figcaption {
+	color: #778899;
+	text-align: center;
+	margin-top: 20px;
+}
+/*Заголовок*/
+h1 {
+	background-color: rgba(230, 230, 250, 0.8);
+	font-size: 36px;
+	text-transform: uppercase;
+	color: #778899;
+	text-align: center;
+	margin: 30px 0;
+}
+/*Оформлення блоку галереї*/
+#gallery {
+	margin-bottom: 50px;
+	background-color: rgba(230, 230, 250, 0.8);
+}
+#gallery:after {
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+}
+/*Спрайти соціальних мереж*/
+.logos a {
+background-image:url(../img/spritesheet/sites.png);
+background-repeat: no-repeat;
+height: 66px;
+width: 66px;
+display: inline-block;
+margin-right: 10px;
+transition: all 0.2s ease-out;
+}
+
+a.instagram {
+	background-position: left top; 
+}
+a.youtube {
+	background-position:-134px -134px; 
+}
+
+a.instagram:hover {
+	background-position-y
+	: -67px; 
+}
+a.youtube:hover {
+	background-position-y:-201px; 
+}
+/*Анімація метелика*/
+.sprite {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.sprite-image {
+	background: url(../img/spritesheet/butterfly.png) no-repeat;
+	height: 92px;
+	width: 96px;
+	display: block;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 800px;
+	bottom: 0;
+	right: 0;
+	animation: play 1s steps(10) infinite;
+}
+
+@keyframes play {
+	100% {
+		background-position-x: -963px;
+	}
+}
